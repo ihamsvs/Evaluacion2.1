@@ -1,0 +1,8 @@
+C:\Users\OMEN\source\repos\DesarrolloEV2\DesarrolloEV2\obj\Debug\DesarrolloEV2.csproj.AssemblyReference.cache
+C:\Users\OMEN\source\repos\DesarrolloEV2\DesarrolloEV2\obj\Debug\DesarrolloEV2.csproj.SuggestedBindingRedirects.cache
+C:\Users\OMEN\source\repos\DesarrolloEV2\DesarrolloEV2\obj\Debug\DesarrolloEV2.csproj.CoreCompileInputs.cache
+C:\Users\OMEN\source\repos\DesarrolloEV2\DesarrolloEV2\bin\Debug\DesarrolloEV2.exe.config
+C:\Users\OMEN\source\repos\DesarrolloEV2\DesarrolloEV2\bin\Debug\DesarrolloEV2.exe
+C:\Users\OMEN\source\repos\DesarrolloEV2\DesarrolloEV2\bin\Debug\DesarrolloEV2.pdb
+C:\Users\OMEN\source\repos\DesarrolloEV2\DesarrolloEV2\obj\Debug\DesarrolloEV2.exe
+C:\Users\OMEN\source\repos\DesarrolloEV2\DesarrolloEV2\obj\Debug\DesarrolloEV2.pdb
