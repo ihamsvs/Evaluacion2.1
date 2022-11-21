@@ -52,7 +52,7 @@ namespace DesarrolloEV2
                         Console.WriteLine("Buscando trueques sin match:");
                         break;
                     case 6:
-                        Console.WriteLine("Cerrando aplicacion.........");
+                        Console.WriteLine("Cerrando aplicación...");
                         exit = true;
                         break;
 
