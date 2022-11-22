@@ -12,40 +12,52 @@ namespace DesarrolloEV2
         {
             #region declaracion de variables y obejtos
             bool exit = false;
-            DiccionarioProductos p = new DiccionarioProductos();
+            ListaProductos LP = new ListaProductos();
+            
             #endregion
 
             while (!exit)
             {
                 Console.WriteLine("-------------- Bienvenido a Trueque --------------");
-                Console.WriteLine("1 - ¿ Desea intercambiar un objeto ? ");
-                Console.WriteLine("2 - ¿ Buscar un producto en la bodega ?");
-                Console.WriteLine("3 - ¿ Agregar un producto a la bodega ?");
-                Console.WriteLine("4 - Mostrar productos en bodega");
-                Console.WriteLine("5 - Salir de Trueque ");
+                Console.WriteLine("1 - ¿ Crear un usuario ?");
+                Console.WriteLine("2 - Ver trueques disponibles ");
+                Console.WriteLine("3 - ¿ Buscar un producto en la bodega ?");
+                Console.WriteLine("4 - ¿ Agregar un producto a la bodega ?");
+                Console.WriteLine("5 - Mostrar productos en bodega");
+                Console.WriteLine("6 - Buscar trueques sin match");
+                Console.WriteLine("7 - Salir de Trueque ");
 
                 int opcion = int.Parse(Console.ReadLine());
 
                 switch (opcion)
                 {
                     case 1:
-                        Console.WriteLine("Intercambiar producto");
+                        Console.Clear();
+                        Console.WriteLine("------------ Creacion de usuario ------------");
+                        Console.WriteLine("Ingrese el nombre de usuario");
+                        string nombre = Console.ReadLine();
+                        Console.WriteLine("Ingrese una descripcion");
+                        string desc = Console.ReadLine();
+                        Console.WriteLine("Ingrese un valor aproximado");
+                        string valor = Console.ReadLine();
+                        Console.WriteLine("Ingrese su primera preferencia para el trueque");
+                        string p1 = Console.ReadLine();
+                        Console.WriteLine("Ingrese su segunda preferencia para el trueque");
+                        string p2 = Console.ReadLine();
+                        Console.WriteLine("Ingrese su tercera preferencia para el trueque");
+                        string p3 = Console.ReadLine();
+                        LP.CreacionUsuario(nombre, valor, p1, p2, p3);
+                        LP.ObjetoTrueque(desc);
                         break;
                     case 2:
-                        Console.WriteLine("Nombre del producto");
+                        Console.Clear();
+                        LP.MostrarObjetos();
                         break;
                     case 3:
-                        Console.WriteLine("Que producto desea agregar");
-                        Console.WriteLine("Ingrese la llave del producto");
-                        int key = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Ingrese el nombre del producto");
-                        string nombre = Console.ReadLine();
-                        p.AgregarProducto(key, nombre);
+                        
                         break;
                     case 4:
-                        Console.WriteLine("Ingrese el identificador del producto");
-                        int llave = int.Parse(Console.ReadLine());
-                        p.MostrarProductos(llave);
+                        
                         break;
                     case 5:
                         Console.WriteLine("Cerrando aplicacion.........");
