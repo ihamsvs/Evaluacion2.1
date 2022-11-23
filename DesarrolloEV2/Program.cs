@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DesarrolloEV2
 {
      class Program
-    {
+     {
         static void Main(string[] args)
         {
             #region declaracion de variables y obejtos
@@ -36,7 +36,7 @@ namespace DesarrolloEV2
                 {
                     case 1:
                         Console.Clear();
-                        Console.WriteLine("------------ Creación de usuario ------------");
+                        Console.WriteLine("-------------- Creación de usuario --------------");
                         Console.WriteLine();
                         Console.WriteLine("Ingrese el nombre del usuario:");
                         string nombre = Console.ReadLine();
@@ -79,21 +79,23 @@ namespace DesarrolloEV2
                         
                         break;
                     case 5:
-                        Console.WriteLine("Cerrando aplicación...");
+
+                        break;
+                    case 6:
+                        Console.Clear();
+                        LP.MostrarSinMatch();
+                        Console.WriteLine();
+                        Console.WriteLine("Presione la tecla ENTER para volver al menú...");
+                        break;
+                    case 7:
+                        Console.WriteLine();
+                        Console.WriteLine("Presione ENTER para cerrar la aplicación...");
                         exit = true;
                         break;
-
-
-
-
                 }
-
-
-
 
                 Console.ReadKey();
             }
         }
-    }
+     }
 }
-

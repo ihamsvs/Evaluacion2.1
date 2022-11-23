@@ -18,27 +18,32 @@ namespace DesarrolloEV2
             Usuarios.Add(P1);
             Usuarios.Add(P2);
             Usuarios.Add(P3);
-
-
         }
 
         public void ObjetoTrueque(string descripcion, string fecha)
-        {
-            
+        {   
             Objeto.Add(descripcion);
             Objeto.Add(fecha);
         }
         
         public void MostrarObjetos()
         {
-            Console.WriteLine("Mostrando trueques disponibles:");
+            Console.WriteLine("-------------- Mostrando trueques disponibles: --------------");
+            Console.WriteLine();
+            for (int x = 0; x < Objeto.Count; x++)
+            {
+                Console.WriteLine(Objeto[x]);
+            }   
+        }
+
+        public void MostrarSinMatch()
+        {
+            Console.WriteLine("-------------- Mostrando trueques sin match: --------------");
             Console.WriteLine();
             for (int x = 0; x < Objeto.Count; x++)
             {
                 Console.WriteLine(Objeto[x]);
             }
-
-            
         }
 
     }
