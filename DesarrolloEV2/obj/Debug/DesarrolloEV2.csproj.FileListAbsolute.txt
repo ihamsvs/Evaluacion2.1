@@ -6,3 +6,11 @@ C:\Users\OMEN\source\repos\DesarrolloEV2\DesarrolloEV2\bin\Debug\DesarrolloEV2.e
 C:\Users\OMEN\source\repos\DesarrolloEV2\DesarrolloEV2\bin\Debug\DesarrolloEV2.pdb
 C:\Users\OMEN\source\repos\DesarrolloEV2\DesarrolloEV2\obj\Debug\DesarrolloEV2.exe
 C:\Users\OMEN\source\repos\DesarrolloEV2\DesarrolloEV2\obj\Debug\DesarrolloEV2.pdb
+C:\Users\NXEVO\source\repos\Evaluacion2.1\DesarrolloEV2\bin\Debug\DesarrolloEV2.exe.config
+C:\Users\NXEVO\source\repos\Evaluacion2.1\DesarrolloEV2\bin\Debug\DesarrolloEV2.exe
+C:\Users\NXEVO\source\repos\Evaluacion2.1\DesarrolloEV2\bin\Debug\DesarrolloEV2.pdb
+C:\Users\NXEVO\source\repos\Evaluacion2.1\DesarrolloEV2\obj\Debug\DesarrolloEV2.csproj.AssemblyReference.cache
+C:\Users\NXEVO\source\repos\Evaluacion2.1\DesarrolloEV2\obj\Debug\DesarrolloEV2.csproj.SuggestedBindingRedirects.cache
+C:\Users\NXEVO\source\repos\Evaluacion2.1\DesarrolloEV2\obj\Debug\DesarrolloEV2.csproj.CoreCompileInputs.cache
+C:\Users\NXEVO\source\repos\Evaluacion2.1\DesarrolloEV2\obj\Debug\DesarrolloEV2.exe
+C:\Users\NXEVO\source\repos\Evaluacion2.1\DesarrolloEV2\obj\Debug\DesarrolloEV2.pdb

@@ -18,14 +18,17 @@ namespace DesarrolloEV2
 
             while (!exit)
             {
+                Console.Clear();
                 Console.WriteLine("-------------- Bienvenido a Trueque --------------");
-                Console.WriteLine("1 - ¿ Crear un usuario ?");
+                Console.WriteLine();
+                Console.WriteLine("1 - ¿ Desea crear un nuevo usuario ?");
                 Console.WriteLine("2 - Ver trueques disponibles ");
                 Console.WriteLine("3 - ¿ Buscar un producto en la bodega ?");
                 Console.WriteLine("4 - ¿ Agregar un producto a la bodega ?");
                 Console.WriteLine("5 - Mostrar productos en bodega");
                 Console.WriteLine("6 - Buscar trueques sin match");
                 Console.WriteLine("7 - Salir de Trueque ");
+                Console.WriteLine();
 
                 int opcion = int.Parse(Console.ReadLine());
 
@@ -33,25 +36,41 @@ namespace DesarrolloEV2
                 {
                     case 1:
                         Console.Clear();
-                        Console.WriteLine("------------ Creacion de usuario ------------");
-                        Console.WriteLine("Ingrese el nombre de usuario");
+                        Console.WriteLine("------------ Creación de usuario ------------");
+                        Console.WriteLine();
+                        Console.WriteLine("Ingrese el nombre del usuario:");
                         string nombre = Console.ReadLine();
-                        Console.WriteLine("Ingrese una descripcion");
+                        Console.WriteLine("Ingrese el nombre del producto que desea intercambiar:");
                         string desc = Console.ReadLine();
-                        Console.WriteLine("Ingrese un valor aproximado");
+                        Console.WriteLine("Ingrese el valor aproximado que desea obtener por el producto:");
                         string valor = Console.ReadLine();
-                        Console.WriteLine("Ingrese su primera preferencia para el trueque");
+                        Console.WriteLine("Ingrese su primera preferencia de producto para el trueque:");
                         string p1 = Console.ReadLine();
-                        Console.WriteLine("Ingrese su segunda preferencia para el trueque");
+                        Console.WriteLine("Ingrese su segunda preferencia de producto para el trueque:");
                         string p2 = Console.ReadLine();
-                        Console.WriteLine("Ingrese su tercera preferencia para el trueque");
+                        Console.WriteLine("Ingrese su tercera preferencia de producto para el trueque:");
                         string p3 = Console.ReadLine();
+                        Console.WriteLine();
+                        Console.WriteLine("Se creará el usuario: " + nombre);
+                        Console.WriteLine("Con el producto: " + desc);
+                        Console.WriteLine("Por un valor aproximado de: " + valor);
+                        Console.WriteLine("Sus preferencias de trueque son: " + p1 + ", " + p2 + ", " + p3);
+                        Console.WriteLine();
+                        Console.WriteLine("Presione la tecla ENTER para confirmar");
+                        Console.ReadLine();
+                        Console.WriteLine(DateTime.Now + " ¡ Usuario creado con éxito !");
+                        Console.WriteLine();
+                        Console.WriteLine("Presione la tecla ENTER para volver al menú...");
+                        string fecha = DateTime.Now.ToString();
                         LP.CreacionUsuario(nombre, valor, p1, p2, p3);
-                        LP.ObjetoTrueque(desc);
+                        LP.ObjetoTrueque(desc, fecha);
+                        Console.WriteLine();
                         break;
                     case 2:
                         Console.Clear();
                         LP.MostrarObjetos();
+                        Console.WriteLine();
+                        Console.WriteLine("Presione la tecla ENTER para volver al menú...");
                         break;
                     case 3:
                         
@@ -60,7 +79,7 @@ namespace DesarrolloEV2
                         
                         break;
                     case 5:
-                        Console.WriteLine("Cerrando aplicacion.........");
+                        Console.WriteLine("Cerrando aplicación...");
                         exit = true;
                         break;
 
