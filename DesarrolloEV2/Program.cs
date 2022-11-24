@@ -24,8 +24,8 @@ namespace DesarrolloEV2
                 Console.WriteLine("1 - ¿ Crear un usuario ?");
                 Console.WriteLine("2 - Ver trueques disponibles ");
                 Console.WriteLine("3 - ¿ Quieres intercambiar algo ?");
-                Console.WriteLine("4 - ¿ Agregar un producto a la bodega ?");
-                Console.WriteLine("5 - Mostrar productos en bodega");
+                Console.WriteLine("4 - Ver lista de trueques ya completados");
+                Console.WriteLine("5 - Buscar productos por valor");
                 Console.WriteLine("6 - Buscar trueques sin match");
                 Console.WriteLine("7 - Salir de Trueque ");
                 Console.WriteLine();
@@ -63,7 +63,7 @@ namespace DesarrolloEV2
                         Console.WriteLine("Presione la tecla ENTER para volver al menú...");
                         string fecha = DateTime.Now.ToString();
                         LP.CreacionUsuario(nombre, valor, p1, p2, p3);
-                        LP.ObjetoTrueque(desc, fecha);
+                        LP.ObjetoTrueque(desc, fecha, valor);
                         Console.WriteLine();
                         break;
                     case 2:
@@ -78,11 +78,13 @@ namespace DesarrolloEV2
                         LP.Match(match);
                         break;
                     case 4:
-
+                        Console.Clear();
+                        LP.MostrarTruequesCompletados();
                         break;
                     case 5:
-                        Console.WriteLine("Cerrando aplicacion.........");
-                        exit = true;
+                        Console.Clear();
+                        string v = Console.ReadLine();
+                        LP.BuscarObjetos(v);
                         break;
                     case 6:
                         Console.Clear();
@@ -100,5 +102,6 @@ namespace DesarrolloEV2
                 Console.ReadKey();
             }
         }
+        
      }
 }

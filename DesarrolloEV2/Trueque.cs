@@ -10,16 +10,18 @@ namespace DesarrolloEV2
     {
         public string Descripcion { get; set; }
         public string Fecha { get; set; }
+        public string Valor { get; set; }
 
-        public Trueque()
+        public Trueque(string Descripcion)
         {
 
         }
-
-        public Trueque(string Descripcion, string Fecha)
+        
+        public Trueque(string Descripcion, string Fecha, string valor)
         {
             this.Descripcion = Descripcion;
             this.Fecha = Fecha;
+            Valor = valor;
         }
 
     }
