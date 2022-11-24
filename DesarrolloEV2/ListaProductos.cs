@@ -50,7 +50,9 @@ namespace DesarrolloEV2
             TruequeC.Add(new TruequesCompletados(opcion, opcion2));
             trueques.Remove(new Trueque(opcion));
             Console.WriteLine();
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Trueque confirmado y guardado en su respectiva lista");
+            Console.ResetColor();
             Console.WriteLine();
             Console.WriteLine("Presione la tecla ENTER para volver al menú...");
         }

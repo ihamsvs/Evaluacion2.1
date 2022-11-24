@@ -58,7 +58,9 @@ namespace DesarrolloEV2
                         Console.WriteLine();
                         Console.WriteLine("Presione la tecla ENTER para confirmar");
                         Console.ReadLine();
+                        Console.BackgroundColor = ConsoleColor.DarkGreen;
                         Console.WriteLine(DateTime.Now + " ¡ Usuario creado con éxito !");
+                        Console.ResetColor();
                         Console.WriteLine();
                         Console.WriteLine("Presione la tecla ENTER para volver al menú...");
                         string fecha = DateTime.Now.ToShortDateString();
