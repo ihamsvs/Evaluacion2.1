@@ -32,48 +32,61 @@ namespace DesarrolloEV2
         public void Match(string nombre)
         {
             IEnumerable<Trueque> ma = from n in trueques where n.Descripcion == nombre select n;
-            Console.WriteLine("Objetos disponibles para trueque según su busqueda "+ nombre );
+            Console.WriteLine();
+            Console.WriteLine("Productos disponibles para trueque según su busqueda: "+  nombre );
+            Console.WriteLine();
             foreach (Trueque tr in ma)
             {
-                Console.WriteLine(tr.Descripcion + " "+ tr.Fecha+ " " + tr.Valor);
+                Console.WriteLine(tr.Descripcion + " "+ tr.Fecha+ " " + "Valor: " + tr.Valor);
             }
-            Console.WriteLine("¿ Por cuál objeto de la lista mostrada deseario intercambiar ?");
+            Console.WriteLine();
+            Console.WriteLine("¿ Cuál producto de la lista desplegada desearía obtener ?");
             string opcion = Console.ReadLine();
-            Console.WriteLine("Usted que da a cambio de "+ opcion);
+            Console.WriteLine();
+            Console.WriteLine("¿ Qué daría a cambio de "+ opcion +" ?");
             string opcion2 = Console.ReadLine();
-            Console.WriteLine("Se ha hecho el trueque de " + " " + opcion + " " + "por " + " " + opcion2);
+            Console.WriteLine();
+            Console.WriteLine("Se ha hecho el trueque de " + opcion + " " + "por " + opcion2);
             TruequeC.Add(new TruequesCompletados(opcion, opcion2));
             trueques.Remove(new Trueque(opcion));
+            Console.WriteLine();
             Console.WriteLine("Trueque confirmado y guardado en su respectiva lista");
+            Console.WriteLine();
+            Console.WriteLine("Presione la tecla ENTER para volver al menú...");
         }
         
         public void MostrarTruequesCompletados()
         {
-            Console.WriteLine("Mostrando trueques completos");
+            Console.WriteLine("-------------- Mostrando trueques completados: --------------");
+            Console.WriteLine();
             foreach (TruequesCompletados i in TruequeC)
             {
-                Console.WriteLine(" se ha intercambiado" + " " + i.objeto1 + " " + "por" + " " + i.objeto2);
+                Console.WriteLine("Se ha intercambiado" + " " + i.objeto1 + " " + "por" + " " + i.objeto2);
             }
         }
 
         public void MostrarObjetos()
         {
-            Console.WriteLine("Mostrando trueques disponibles:");
+            Console.WriteLine("-------------- Mostrando trueques disponibles: --------------");
             Console.WriteLine();
             for (int x = 0; x < trueques.Count; x++)
             {
-                Console.WriteLine(trueques[x].Descripcion + " "+ trueques[x].Fecha + " Valor aproximado: "+ trueques[x].Valor);
+                Console.WriteLine(trueques[x].Descripcion + " "+ trueques[x].Fecha + " Valor: "+ trueques[x].Valor);
             }
         }
         
         public void BuscarObjetos(string valor)
         {    
             IEnumerable<Trueque> BV = from n in trueques where n.Valor == valor orderby n.Valor select n;
-            Console.WriteLine("Trueques que tienen un valor aproximado al que busca");
+            Console.WriteLine();
+            Console.WriteLine("Buscando productos...");
+            Console.WriteLine();
             foreach (Trueque vb in trueques)
             {
-                Console.WriteLine("Se han encontrado estos resultados " + vb.Descripcion + " " + vb.Fecha + "Con un valor de:  " + vb.Valor);
+                Console.WriteLine("Se han encontrado estos resultados: " + vb.Descripcion + " " + vb.Fecha + " " + "Con un valor de: " + vb.Valor);
             }
+            Console.WriteLine();
+            Console.WriteLine("Presione la tecla ENTER para volver al menú...");
         }
 
         public void MostrarSinMatch()

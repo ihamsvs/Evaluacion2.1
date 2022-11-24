@@ -24,10 +24,10 @@ namespace DesarrolloEV2
                 Console.WriteLine("1 - ¿ Crear un usuario ?");
                 Console.WriteLine("2 - Ver trueques disponibles ");
                 Console.WriteLine("3 - ¿ Quieres intercambiar algo ?");
-                Console.WriteLine("4 - Ver lista de trueques ya completados");
+                Console.WriteLine("4 - Ver lista de trueques completados");
                 Console.WriteLine("5 - Buscar productos por valor");
                 Console.WriteLine("6 - Buscar trueques sin match");
-                Console.WriteLine("7 - Salir de Trueque ");
+                Console.WriteLine("7 - Salir de Trueque");
                 Console.WriteLine();
 
                 int opcion = int.Parse(Console.ReadLine());
@@ -53,7 +53,7 @@ namespace DesarrolloEV2
                         Console.WriteLine();
                         Console.WriteLine("Se creará el usuario: " + nombre);
                         Console.WriteLine("Con el producto: " + desc);
-                        Console.WriteLine("Por un valor aproximado de: " + valor);
+                        Console.WriteLine("Por un valor de: " + valor);
                         Console.WriteLine("Sus preferencias de trueque son: " + p1 + ", " + p2 + ", " + p3);
                         Console.WriteLine();
                         Console.WriteLine("Presione la tecla ENTER para confirmar");
@@ -61,7 +61,7 @@ namespace DesarrolloEV2
                         Console.WriteLine(DateTime.Now + " ¡ Usuario creado con éxito !");
                         Console.WriteLine();
                         Console.WriteLine("Presione la tecla ENTER para volver al menú...");
-                        string fecha = DateTime.Now.ToString();
+                        string fecha = DateTime.Now.ToShortDateString();
                         LP.CreacionUsuario(nombre, valor, p1, p2, p3);
                         LP.ObjetoTrueque(desc, fecha, valor);
                         Console.WriteLine();
@@ -73,16 +73,24 @@ namespace DesarrolloEV2
                         Console.WriteLine("Presione la tecla ENTER para volver al menú...");
                         break;
                     case 3:
-                        Console.WriteLine("Ingrese el nombre de un producto para hacer un match");
+                        Console.Clear();
+                        Console.WriteLine("------------ Sección de intercambio ------------");
+                        Console.WriteLine();
+                        Console.WriteLine("Por favor ingrese el nombre de un producto para hacer match: ");
                         string match = Console.ReadLine();
                         LP.Match(match);
                         break;
                     case 4:
                         Console.Clear();
                         LP.MostrarTruequesCompletados();
+                        Console.WriteLine();
+                        Console.WriteLine("Presione la tecla ENTER para volver al menú...");
                         break;
                     case 5:
                         Console.Clear();
+                        Console.WriteLine("------------ Busqueda por valor ------------");
+                        Console.WriteLine();
+                        Console.WriteLine("Por favor ingrese el valor del producto para iniciar la busqueda: ");
                         string v = Console.ReadLine();
                         LP.BuscarObjetos(v);
                         break;
