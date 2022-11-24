@@ -16,14 +16,14 @@ namespace DesarrolloEV2
             
             #endregion
 
-            while (!exit)
+            while (!exit) 
             {
                 Console.Clear();
                 Console.WriteLine("-------------- Bienvenido a Trueque --------------");
                 Console.WriteLine();
-                Console.WriteLine("1 - ¿ Desea crear un nuevo usuario ?");
+                Console.WriteLine("1 - ¿ Crear un usuario ?");
                 Console.WriteLine("2 - Ver trueques disponibles ");
-                Console.WriteLine("3 - ¿ Buscar un producto en la bodega ?");
+                Console.WriteLine("3 - ¿ Quieres intercambiar algo ?");
                 Console.WriteLine("4 - ¿ Agregar un producto a la bodega ?");
                 Console.WriteLine("5 - Mostrar productos en bodega");
                 Console.WriteLine("6 - Buscar trueques sin match");
@@ -32,11 +32,11 @@ namespace DesarrolloEV2
 
                 int opcion = int.Parse(Console.ReadLine());
 
-                switch (opcion)
+                switch (opcion) 
                 {
                     case 1:
                         Console.Clear();
-                        Console.WriteLine("-------------- Creación de usuario --------------");
+                        Console.WriteLine("------------ Creación de usuario ------------");
                         Console.WriteLine();
                         Console.WriteLine("Ingrese el nombre del usuario:");
                         string nombre = Console.ReadLine();
@@ -73,13 +73,16 @@ namespace DesarrolloEV2
                         Console.WriteLine("Presione la tecla ENTER para volver al menú...");
                         break;
                     case 3:
-                        
+                        Console.WriteLine("Ingrese el nombre de un producto para hacer un match");
+                        string match = Console.ReadLine();
+                        LP.Match(match);
                         break;
                     case 4:
-                        
+
                         break;
                     case 5:
-
+                        Console.WriteLine("Cerrando aplicacion.........");
+                        exit = true;
                         break;
                     case 6:
                         Console.Clear();
