@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace DesarrolloEV2 
 {
@@ -53,6 +54,8 @@ namespace DesarrolloEV2
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Trueque confirmado y guardado en su respectiva lista");
             Console.ResetColor();
+            string ruta2 = "LogTrueques.log";
+            File.WriteAllText(ruta2, "Se ha intercambiado " + opcion + " " + "por" + " " + opcion2);
             Console.WriteLine();
             Console.WriteLine("Presione la tecla ENTER para volver al menú...");
         }

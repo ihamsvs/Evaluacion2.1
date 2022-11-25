@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace DesarrolloEV2
 {
@@ -40,6 +41,10 @@ namespace DesarrolloEV2
                         Console.WriteLine();
                         Console.WriteLine("Ingrese el nombre del usuario:");
                         string nombre = Console.ReadLine();
+                        Console.WriteLine("Ingrese número de teléfono del usuario:");
+                        string telf = Console.ReadLine();
+                        Console.WriteLine("Ingrese email del usuario:");
+                        string mail = Console.ReadLine();
                         Console.WriteLine("Ingrese el nombre del producto que desea intercambiar:");
                         string desc = Console.ReadLine();
                         Console.WriteLine("Ingrese el valor aproximado que desea obtener por el producto:");
@@ -52,6 +57,8 @@ namespace DesarrolloEV2
                         string p3 = Console.ReadLine();
                         Console.WriteLine();
                         Console.WriteLine("Se creará el usuario: " + nombre);
+                        Console.WriteLine("Teléfono: " + telf);
+                        Console.WriteLine("Email: " + mail);
                         Console.WriteLine("Con el producto: " + desc);
                         Console.WriteLine("Por un valor de: " + valor);
                         Console.WriteLine("Sus preferencias de trueque son: " + p1 + ", " + p2 + ", " + p3);
@@ -66,6 +73,8 @@ namespace DesarrolloEV2
                         string fecha = DateTime.Now.ToShortDateString();
                         LP.CreacionUsuario(nombre, valor, p1, p2, p3);
                         LP.ObjetoTrueque(desc, fecha, valor);
+                        string ruta1 = "LogUsuarios.log";
+                        File.WriteAllText(ruta1, "Usuario: " + nombre + " " + "Teléfono: " + telf + " " + "Email: " + mail + " " + "Valor: " + valor + " " + "Preferencia 1: " + p1 + " " + "Preferencia 2: " + p2 + " " + "Preferencia 3: " + p3 );
                         Console.WriteLine();
                         break;
                     case 2:
